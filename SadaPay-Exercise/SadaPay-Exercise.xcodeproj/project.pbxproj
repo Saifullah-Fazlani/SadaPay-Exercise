@@ -16,6 +16,9 @@
 		B5FB27DE267E246F00952600 /* Retry-Animation-White.json in Resources */ = {isa = PBXBuildFile; fileRef = B5FB27DC267E246F00952600 /* Retry-Animation-White.json */; };
 		B5FB27DF267E246F00952600 /* Retry-Animation-Black.json in Resources */ = {isa = PBXBuildFile; fileRef = B5FB27DD267E246F00952600 /* Retry-Animation-Black.json */; };
 		B5FB27E4267E249100952600 /* TrendingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FB27E3267E249100952600 /* TrendingListVC.swift */; };
+		B5FB27EE267E28D100952600 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FB27ED267E28D100952600 /* RepositoryModel.swift */; };
+		B5FB280B267E2AEA00952600 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FB280A267E2AEA00952600 /* NetworkService.swift */; };
+		B5FB280E267E2C0C00952600 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FB280D267E2C0C00952600 /* URLConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		B5FB27DC267E246F00952600 /* Retry-Animation-White.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Retry-Animation-White.json"; sourceTree = "<group>"; };
 		B5FB27DD267E246F00952600 /* Retry-Animation-Black.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Retry-Animation-Black.json"; sourceTree = "<group>"; };
 		B5FB27E3267E249100952600 /* TrendingListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingListVC.swift; sourceTree = "<group>"; };
+		B5FB27ED267E28D100952600 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
+		B5FB280A267E2AEA00952600 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		B5FB280D267E2C0C00952600 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		CA147E893B30716E3DAAF7CF /* Pods-SadaPay-Exercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SadaPay-Exercise.debug.xcconfig"; path = "Target Support Files/Pods-SadaPay-Exercise/Pods-SadaPay-Exercise.debug.xcconfig"; sourceTree = "<group>"; };
 		D168F7CB7E8FA7B762F091AA /* libPods-SadaPay-Exercise.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SadaPay-Exercise.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC64F22E874C95AFCC85BA84 /* Pods-SadaPay-Exercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SadaPay-Exercise.release.xcconfig"; path = "Target Support Files/Pods-SadaPay-Exercise/Pods-SadaPay-Exercise.release.xcconfig"; sourceTree = "<group>"; };
@@ -52,7 +58,6 @@
 				CA147E893B30716E3DAAF7CF /* Pods-SadaPay-Exercise.debug.xcconfig */,
 				DC64F22E874C95AFCC85BA84 /* Pods-SadaPay-Exercise.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -116,6 +121,8 @@
 				B5FB27E1267E249100952600 /* Modules */,
 				B56F65E4267E19B800BBD3F9 /* Storyboards */,
 				B53182B4267E1DF100E7C22E /* Animations */,
+				B5FB27EC267E28BA00952600 /* Models */,
+				B5FB2813267E2DEA00952600 /* Network Service */,
 				B56560CA267E1FF60042AA48 /* Supporting Files */,
 				B5B0FF58267E139200BF4CD5 /* Assets.xcassets */,
 			);
@@ -136,6 +143,23 @@
 				B5FB27E3267E249100952600 /* TrendingListVC.swift */,
 			);
 			path = "Trending Module";
+			sourceTree = "<group>";
+		};
+		B5FB27EC267E28BA00952600 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B5FB27ED267E28D100952600 /* RepositoryModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B5FB2813267E2DEA00952600 /* Network Service */ = {
+			isa = PBXGroup;
+			children = (
+				B5FB280A267E2AEA00952600 /* NetworkService.swift */,
+				B5FB280D267E2C0C00952600 /* URLConstants.swift */,
+			);
+			path = "Network Service";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,8 +260,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5FB280B267E2AEA00952600 /* NetworkService.swift in Sources */,
 				B5B0FF50267E138E00BF4CD5 /* AppDelegate.swift in Sources */,
 				B5FB27E4267E249100952600 /* TrendingListVC.swift in Sources */,
+				B5FB280E267E2C0C00952600 /* URLConstants.swift in Sources */,
+				B5FB27EE267E28D100952600 /* RepositoryModel.swift in Sources */,
 				B5B0FF52267E138E00BF4CD5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
