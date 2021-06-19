@@ -1,0 +1,6 @@
+module Pods_SadaPay_Exercise {
+  umbrella header "Pods-SadaPay-Exercise-umbrella.h"
+
+  export *
+  module * { export * }
+}

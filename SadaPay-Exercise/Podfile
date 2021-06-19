@@ -1,0 +1,10 @@
+platform :ios, '13.0'
+
+target 'SadaPay-Exercise' do
+
+  pod 'Alamofire', '~> 5.4'
+  pod 'SkeletonView', '~> 1.17.2'
+  pod 'SDWebImage', '~> 5.11.0'
+  pod 'lottie-ios', '~> 3.2.3'
+
+end
