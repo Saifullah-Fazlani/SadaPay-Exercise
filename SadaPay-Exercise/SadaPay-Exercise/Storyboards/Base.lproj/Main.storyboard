@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gVb-nW-IJz"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RE2-i5-a1F"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tVK-pn-BuX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1856" y="120"/>
         </scene>
-        <!--Trending ListVC-->
+        <!--Trending-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="TrendingListVC" id="BYZ-38-t0r" customClass="TrendingListVC" customModule="SadaPay_Exercise" customModuleProvider="target" sceneMemberID="viewController">
@@ -47,13 +48,21 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="W22-KZ-chn"/>
                                         </connections>
                                     </tableView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGS-h8-of6" userLabel="Container View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Vqi-3n-shd" secondAttribute="bottom" id="5cg-lD-GxA"/>
                                     <constraint firstAttribute="trailing" secondItem="Vqi-3n-shd" secondAttribute="trailing" id="8eJ-WH-j7d"/>
                                     <constraint firstItem="Vqi-3n-shd" firstAttribute="leading" secondItem="ZPz-xH-3nP" secondAttribute="leading" id="B1y-sb-Iik"/>
+                                    <constraint firstAttribute="trailing" secondItem="fGS-h8-of6" secondAttribute="trailing" id="IlN-vF-dHI"/>
                                     <constraint firstItem="Vqi-3n-shd" firstAttribute="top" secondItem="ZPz-xH-3nP" secondAttribute="top" id="d0P-Ae-TZA"/>
+                                    <constraint firstItem="fGS-h8-of6" firstAttribute="top" secondItem="ZPz-xH-3nP" secondAttribute="top" id="iIf-fJ-gtO"/>
+                                    <constraint firstItem="fGS-h8-of6" firstAttribute="leading" secondItem="ZPz-xH-3nP" secondAttribute="leading" id="nMB-9w-lET"/>
+                                    <constraint firstAttribute="bottom" secondItem="fGS-h8-of6" secondAttribute="bottom" id="zK4-MW-VMT"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
@@ -72,8 +81,9 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" id="H17-1S-yK4"/>
+                    <navigationItem key="navigationItem" title="Trending" id="H17-1S-yK4"/>
                     <connections>
+                        <outlet property="containerView" destination="fGS-h8-of6" id="BGk-MM-bn9"/>
                         <outlet property="parentView" destination="ZPz-xH-3nP" id="5vr-BX-nor"/>
                         <outlet property="tableView" destination="Vqi-3n-shd" id="Qgh-nP-0ce"/>
                     </connections>
@@ -82,8 +92,96 @@
             </objects>
             <point key="canvasLocation" x="-1110" y="120"/>
         </scene>
+        <!--Retry AnimationVC-->
+        <scene sceneID="2OM-3w-dNf">
+            <objects>
+                <viewController storyboardIdentifier="RetryAnimationVC" id="whf-6F-j18" customClass="RetryAnimationVC" customModule="SadaPay_Exercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aIV-yU-YWF" userLabel="Content View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Gs-2I-1H3" userLabel="Parent View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ve7-yf-FGj" userLabel="Container View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dm2-1f-vXj">
+                                        <rect key="frame" x="20" y="448" width="374" height="22.333333333333314"/>
+                                        <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An alien is probably blocking your signal." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWe-0U-QEa">
+                                        <rect key="frame" x="20" y="478.33333333333331" width="374" height="19.666666666666686"/>
+                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1X-Fp-jzK">
+                                        <rect key="frame" x="20" y="666" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="dwd-wJ-cU2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="18"/>
+                                        <state key="normal" title="RETRY">
+                                            <color key="titleColor" name="App-Green"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onBtnRetry:" destination="whf-6F-j18" eventType="touchUpInside" id="gx8-qB-4LB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="AWe-0U-QEa" firstAttribute="leading" secondItem="7Gs-2I-1H3" secondAttribute="leading" constant="20" id="6ZM-6g-fg4"/>
+                                    <constraint firstItem="Dm2-1f-vXj" firstAttribute="leading" secondItem="7Gs-2I-1H3" secondAttribute="leading" constant="20" id="6yt-zb-Ln4"/>
+                                    <constraint firstItem="AWe-0U-QEa" firstAttribute="top" secondItem="Dm2-1f-vXj" secondAttribute="bottom" constant="8" id="75Q-4N-vCh"/>
+                                    <constraint firstAttribute="trailing" secondItem="j1X-Fp-jzK" secondAttribute="trailing" constant="20" id="7Ip-qm-fsm"/>
+                                    <constraint firstItem="ve7-yf-FGj" firstAttribute="height" secondItem="7Gs-2I-1H3" secondAttribute="height" multiplier="0.5" id="91y-jg-Ue5"/>
+                                    <constraint firstAttribute="bottom" secondItem="j1X-Fp-jzK" secondAttribute="bottom" constant="20" id="JMq-Aj-Vi5"/>
+                                    <constraint firstItem="ve7-yf-FGj" firstAttribute="leading" secondItem="7Gs-2I-1H3" secondAttribute="leading" id="Lb6-3c-24N"/>
+                                    <constraint firstItem="ve7-yf-FGj" firstAttribute="top" secondItem="7Gs-2I-1H3" secondAttribute="top" id="Tvm-UX-fJA"/>
+                                    <constraint firstAttribute="trailing" secondItem="AWe-0U-QEa" secondAttribute="trailing" constant="20" id="X36-8c-ZGv"/>
+                                    <constraint firstItem="j1X-Fp-jzK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="AWe-0U-QEa" secondAttribute="bottom" constant="20" id="hN8-Yc-XpJ"/>
+                                    <constraint firstItem="j1X-Fp-jzK" firstAttribute="leading" secondItem="7Gs-2I-1H3" secondAttribute="leading" constant="20" id="ncz-EM-PSs"/>
+                                    <constraint firstItem="Dm2-1f-vXj" firstAttribute="top" secondItem="ve7-yf-FGj" secondAttribute="bottom" constant="80" id="rhA-aH-ele"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dm2-1f-vXj" secondAttribute="trailing" constant="20" id="tNj-p4-nS4"/>
+                                    <constraint firstAttribute="trailing" secondItem="ve7-yf-FGj" secondAttribute="trailing" id="zan-9V-zeP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EyA-oQ-5Fs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Gs-2I-1H3" firstAttribute="top" secondItem="EyA-oQ-5Fs" secondAttribute="top" id="MHv-e9-AFv"/>
+                            <constraint firstItem="EyA-oQ-5Fs" firstAttribute="trailing" secondItem="7Gs-2I-1H3" secondAttribute="trailing" id="Mf0-mV-qZK"/>
+                            <constraint firstItem="7Gs-2I-1H3" firstAttribute="leading" secondItem="EyA-oQ-5Fs" secondAttribute="leading" id="ZMT-rY-Lr2"/>
+                            <constraint firstItem="EyA-oQ-5Fs" firstAttribute="bottom" secondItem="7Gs-2I-1H3" secondAttribute="bottom" id="jQE-6e-G3M"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5fE-Cr-Dnw"/>
+                    <connections>
+                        <outlet property="btnRetry" destination="j1X-Fp-jzK" id="Cby-gW-oAK"/>
+                        <outlet property="containerView" destination="ve7-yf-FGj" id="rKa-JR-gGV"/>
+                        <outlet property="lblFirst" destination="Dm2-1f-vXj" id="Jkg-o3-DHW"/>
+                        <outlet property="lblSecond" destination="AWe-0U-QEa" id="lON-Wm-iUQ"/>
+                        <outlet property="parentView" destination="7Gs-2I-1H3" id="2Jc-LF-zCL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K8M-3x-p9K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-354" y="120"/>
+        </scene>
     </scenes>
     <resources>
+        <namedColor name="App-Green">
+            <color red="0.39599999785423279" green="0.70099997520446777" blue="0.4309999942779541" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -9,18 +9,17 @@
 /* Begin PBXBuildFile section */
 		B59629BD267E40A3006ACFAA /* TrendingListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59629BB267E40A3006ACFAA /* TrendingListTVC.swift */; };
 		B59629BE267E40A3006ACFAA /* TrendingListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B59629BC267E40A3006ACFAA /* TrendingListTVC.xib */; };
-		B5A89965267E4A8A00DBC663 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A89964267E4A8A00DBC663 /* Extensions.swift */; };
+		B5A8426B267E7A78001759A0 /* RetryAnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A8426A267E7A78001759A0 /* RetryAnimationVC.swift */; };
+		B5A84277267E8024001759A0 /* Retry-Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = B5A84276267E8024001759A0 /* Retry-Animation.json */; };
+		B5A89965267E4A8A00DBC663 /* Constants-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A89964267E4A8A00DBC663 /* Constants-Extensions.swift */; };
 		B5B0FF50267E138E00BF4CD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B0FF4F267E138E00BF4CD5 /* AppDelegate.swift */; };
 		B5B0FF52267E138E00BF4CD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B0FF51267E138E00BF4CD5 /* SceneDelegate.swift */; };
 		B5B0FF57267E138E00BF4CD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5B0FF55267E138E00BF4CD5 /* Main.storyboard */; };
 		B5B0FF59267E139200BF4CD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5B0FF58267E139200BF4CD5 /* Assets.xcassets */; };
 		B5B0FF5C267E139200BF4CD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5B0FF5A267E139200BF4CD5 /* LaunchScreen.storyboard */; };
-		B5FB27DE267E246F00952600 /* Retry-Animation-White.json in Resources */ = {isa = PBXBuildFile; fileRef = B5FB27DC267E246F00952600 /* Retry-Animation-White.json */; };
-		B5FB27DF267E246F00952600 /* Retry-Animation-Black.json in Resources */ = {isa = PBXBuildFile; fileRef = B5FB27DD267E246F00952600 /* Retry-Animation-Black.json */; };
 		B5FB27E4267E249100952600 /* TrendingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FB27E3267E249100952600 /* TrendingListVC.swift */; };
 		B5FB27EE267E28D100952600 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FB27ED267E28D100952600 /* RepositoryModel.swift */; };
 		B5FB280B267E2AEA00952600 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FB280A267E2AEA00952600 /* NetworkService.swift */; };
-		B5FB280E267E2C0C00952600 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FB280D267E2C0C00952600 /* URLConstants.swift */; };
 		EEE00AD0D2BA5997B8DC98D4 /* Pods_SadaPay_Exercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2643635DDDF1A769570EF00B /* Pods_SadaPay_Exercise.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +27,9 @@
 		2643635DDDF1A769570EF00B /* Pods_SadaPay_Exercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SadaPay_Exercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59629BB267E40A3006ACFAA /* TrendingListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingListTVC.swift; sourceTree = "<group>"; };
 		B59629BC267E40A3006ACFAA /* TrendingListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingListTVC.xib; sourceTree = "<group>"; };
-		B5A89964267E4A8A00DBC663 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B5A8426A267E7A78001759A0 /* RetryAnimationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetryAnimationVC.swift; sourceTree = "<group>"; };
+		B5A84276267E8024001759A0 /* Retry-Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Retry-Animation.json"; sourceTree = "<group>"; };
+		B5A89964267E4A8A00DBC663 /* Constants-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants-Extensions.swift"; sourceTree = "<group>"; };
 		B5B0FF4C267E138E00BF4CD5 /* SadaPay-Exercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SadaPay-Exercise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B0FF4F267E138E00BF4CD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5B0FF51267E138E00BF4CD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,12 +37,9 @@
 		B5B0FF58267E139200BF4CD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5B0FF5B267E139200BF4CD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5B0FF5D267E139200BF4CD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5FB27DC267E246F00952600 /* Retry-Animation-White.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Retry-Animation-White.json"; sourceTree = "<group>"; };
-		B5FB27DD267E246F00952600 /* Retry-Animation-Black.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Retry-Animation-Black.json"; sourceTree = "<group>"; };
 		B5FB27E3267E249100952600 /* TrendingListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingListVC.swift; sourceTree = "<group>"; };
 		B5FB27ED267E28D100952600 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
 		B5FB280A267E2AEA00952600 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		B5FB280D267E2C0C00952600 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		CA147E893B30716E3DAAF7CF /* Pods-SadaPay-Exercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SadaPay-Exercise.debug.xcconfig"; path = "Target Support Files/Pods-SadaPay-Exercise/Pods-SadaPay-Exercise.debug.xcconfig"; sourceTree = "<group>"; };
 		DC64F22E874C95AFCC85BA84 /* Pods-SadaPay-Exercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SadaPay-Exercise.release.xcconfig"; path = "Target Support Files/Pods-SadaPay-Exercise/Pods-SadaPay-Exercise.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,8 +76,7 @@
 		B53182B4267E1DF100E7C22E /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				B5FB27DD267E246F00952600 /* Retry-Animation-Black.json */,
-				B5FB27DC267E246F00952600 /* Retry-Animation-White.json */,
+				B5A84276267E8024001759A0 /* Retry-Animation.json */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -87,6 +84,7 @@
 		B56560CA267E1FF60042AA48 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B5A89964267E4A8A00DBC663 /* Constants-Extensions.swift */,
 				B5B0FF4F267E138E00BF4CD5 /* AppDelegate.swift */,
 				B5B0FF51267E138E00BF4CD5 /* SceneDelegate.swift */,
 				B5B0FF5A267E139200BF4CD5 /* LaunchScreen.storyboard */,
@@ -112,12 +110,13 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		B5A89967267E4B2000DBC663 /* Extensions */ = {
+		B5A84269267E7A78001759A0 /* Retry Animations Module */ = {
 			isa = PBXGroup;
 			children = (
-				B5A89964267E4A8A00DBC663 /* Extensions.swift */,
+				B5A8426A267E7A78001759A0 /* RetryAnimationVC.swift */,
+				B53182B4267E1DF100E7C22E /* Animations */,
 			);
-			path = Extensions;
+			path = "Retry Animations Module";
 			sourceTree = "<group>";
 		};
 		B5B0FF43267E138E00BF4CD5 = {
@@ -143,10 +142,8 @@
 			children = (
 				B5FB27E1267E249100952600 /* Modules */,
 				B56F65E4267E19B800BBD3F9 /* Storyboards */,
-				B53182B4267E1DF100E7C22E /* Animations */,
 				B5FB27EC267E28BA00952600 /* Models */,
 				B5FB2813267E2DEA00952600 /* Network Service */,
-				B5A89967267E4B2000DBC663 /* Extensions */,
 				B56560CA267E1FF60042AA48 /* Supporting Files */,
 				B5B0FF58267E139200BF4CD5 /* Assets.xcassets */,
 			);
@@ -156,6 +153,7 @@
 		B5FB27E1267E249100952600 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B5A84269267E7A78001759A0 /* Retry Animations Module */,
 				B5FB27E2267E249100952600 /* Trending Module */,
 			);
 			path = Modules;
@@ -182,7 +180,6 @@
 			isa = PBXGroup;
 			children = (
 				B5FB280A267E2AEA00952600 /* NetworkService.swift */,
-				B5FB280D267E2C0C00952600 /* URLConstants.swift */,
 			);
 			path = "Network Service";
 			sourceTree = "<group>";
@@ -247,11 +244,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5B0FF5C267E139200BF4CD5 /* LaunchScreen.storyboard in Resources */,
+				B5A84277267E8024001759A0 /* Retry-Animation.json in Resources */,
 				B5B0FF59267E139200BF4CD5 /* Assets.xcassets in Resources */,
-				B5FB27DF267E246F00952600 /* Retry-Animation-Black.json in Resources */,
 				B5B0FF57267E138E00BF4CD5 /* Main.storyboard in Resources */,
 				B59629BE267E40A3006ACFAA /* TrendingListTVC.xib in Resources */,
-				B5FB27DE267E246F00952600 /* Retry-Animation-White.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,12 +300,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5A8426B267E7A78001759A0 /* RetryAnimationVC.swift in Sources */,
 				B5FB280B267E2AEA00952600 /* NetworkService.swift in Sources */,
 				B5B0FF50267E138E00BF4CD5 /* AppDelegate.swift in Sources */,
 				B5FB27E4267E249100952600 /* TrendingListVC.swift in Sources */,
-				B5A89965267E4A8A00DBC663 /* Extensions.swift in Sources */,
+				B5A89965267E4A8A00DBC663 /* Constants-Extensions.swift in Sources */,
 				B59629BD267E40A3006ACFAA /* TrendingListTVC.swift in Sources */,
-				B5FB280E267E2C0C00952600 /* URLConstants.swift in Sources */,
 				B5FB27EE267E28D100952600 /* RepositoryModel.swift in Sources */,
 				B5B0FF52267E138E00BF4CD5 /* SceneDelegate.swift in Sources */,
 			);

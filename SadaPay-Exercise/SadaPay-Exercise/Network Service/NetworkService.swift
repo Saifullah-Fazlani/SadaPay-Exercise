@@ -34,14 +34,14 @@ class NetworkService {
         }
         
         else {
-            completionHandler(nil, "Network is not reachable!", nil)
+            completionHandler(nil, Strings.networkUnreachable, nil)
         }
         
     }
     
     func getRepositoryList(_ callback: @escaping((_ response: Repository?, _ error: String?) -> Void)) {
         
-        let route = URL(string: Route.baseURL.rawValue + Route.repositoryList.rawValue)!
+        let route = URL(string: URLConstant.baseURL.rawValue + URLConstant.repositoryList.rawValue)!
         
         self.performRequest(route: route, params: nil, method: .get) { (response, errorMessage, statusCode) in
             
@@ -51,7 +51,7 @@ class NetworkService {
             }
             
             guard statusCode == 200 else {
-                callback(nil, "Invalid response")
+                callback(nil, Strings.invalidResponse)
                 return
             }
             
@@ -60,7 +60,7 @@ class NetworkService {
                 callback(repositoryModel, nil)
             }
             catch {
-                callback(nil, "Unable to decode JSON data!")
+                callback(nil, Strings.unableToDecode)
             }
             
         }
