@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		367DDABB9054A76EEA2C7743 /* libPods-SadaPay-Exercise.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D168F7CB7E8FA7B762F091AA /* libPods-SadaPay-Exercise.a */; };
 		B59629BD267E40A3006ACFAA /* TrendingListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59629BB267E40A3006ACFAA /* TrendingListTVC.swift */; };
 		B59629BE267E40A3006ACFAA /* TrendingListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B59629BC267E40A3006ACFAA /* TrendingListTVC.xib */; };
 		B5B0FF50267E138E00BF4CD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B0FF4F267E138E00BF4CD5 /* AppDelegate.swift */; };
@@ -21,9 +20,11 @@
 		B5FB27EE267E28D100952600 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FB27ED267E28D100952600 /* RepositoryModel.swift */; };
 		B5FB280B267E2AEA00952600 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FB280A267E2AEA00952600 /* NetworkService.swift */; };
 		B5FB280E267E2C0C00952600 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FB280D267E2C0C00952600 /* URLConstants.swift */; };
+		EEE00AD0D2BA5997B8DC98D4 /* Pods_SadaPay_Exercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2643635DDDF1A769570EF00B /* Pods_SadaPay_Exercise.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2643635DDDF1A769570EF00B /* Pods_SadaPay_Exercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SadaPay_Exercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59629BB267E40A3006ACFAA /* TrendingListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingListTVC.swift; sourceTree = "<group>"; };
 		B59629BC267E40A3006ACFAA /* TrendingListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingListTVC.xib; sourceTree = "<group>"; };
 		B5B0FF4C267E138E00BF4CD5 /* SadaPay-Exercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SadaPay-Exercise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,7 +41,6 @@
 		B5FB280A267E2AEA00952600 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		B5FB280D267E2C0C00952600 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		CA147E893B30716E3DAAF7CF /* Pods-SadaPay-Exercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SadaPay-Exercise.debug.xcconfig"; path = "Target Support Files/Pods-SadaPay-Exercise/Pods-SadaPay-Exercise.debug.xcconfig"; sourceTree = "<group>"; };
-		D168F7CB7E8FA7B762F091AA /* libPods-SadaPay-Exercise.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SadaPay-Exercise.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC64F22E874C95AFCC85BA84 /* Pods-SadaPay-Exercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SadaPay-Exercise.release.xcconfig"; path = "Target Support Files/Pods-SadaPay-Exercise/Pods-SadaPay-Exercise.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				367DDABB9054A76EEA2C7743 /* libPods-SadaPay-Exercise.a in Frameworks */,
+				EEE00AD0D2BA5997B8DC98D4 /* Pods_SadaPay_Exercise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +68,7 @@
 		B2BC3AD5FA2A110DC2534D99 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D168F7CB7E8FA7B762F091AA /* libPods-SadaPay-Exercise.a */,
+				2643635DDDF1A769570EF00B /* Pods_SadaPay_Exercise.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -187,6 +187,7 @@
 				B5B0FF48267E138E00BF4CD5 /* Sources */,
 				B5B0FF49267E138E00BF4CD5 /* Frameworks */,
 				B5B0FF4A267E138E00BF4CD5 /* Resources */,
+				BC429537457E3C49406D9645 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -266,6 +267,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC429537457E3C49406D9645 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SadaPay-Exercise/Pods-SadaPay-Exercise-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SadaPay-Exercise/Pods-SadaPay-Exercise-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SadaPay-Exercise/Pods-SadaPay-Exercise-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -1,6 +1,7 @@
 platform :ios, '13.0'
 
 target 'SadaPay-Exercise' do
+  use_frameworks!
 
   pod 'Alamofire', '~> 5.4'
   pod 'SkeletonView', '~> 1.17.2'
