@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		B59629BD267E40A3006ACFAA /* TrendingListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59629BB267E40A3006ACFAA /* TrendingListTVC.swift */; };
 		B59629BE267E40A3006ACFAA /* TrendingListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B59629BC267E40A3006ACFAA /* TrendingListTVC.xib */; };
+		B5A89965267E4A8A00DBC663 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A89964267E4A8A00DBC663 /* Extensions.swift */; };
 		B5B0FF50267E138E00BF4CD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B0FF4F267E138E00BF4CD5 /* AppDelegate.swift */; };
 		B5B0FF52267E138E00BF4CD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B0FF51267E138E00BF4CD5 /* SceneDelegate.swift */; };
 		B5B0FF57267E138E00BF4CD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5B0FF55267E138E00BF4CD5 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		2643635DDDF1A769570EF00B /* Pods_SadaPay_Exercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SadaPay_Exercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59629BB267E40A3006ACFAA /* TrendingListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingListTVC.swift; sourceTree = "<group>"; };
 		B59629BC267E40A3006ACFAA /* TrendingListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingListTVC.xib; sourceTree = "<group>"; };
+		B5A89964267E4A8A00DBC663 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B5B0FF4C267E138E00BF4CD5 /* SadaPay-Exercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SadaPay-Exercise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B0FF4F267E138E00BF4CD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5B0FF51267E138E00BF4CD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		B5A89967267E4B2000DBC663 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B5A89964267E4A8A00DBC663 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B5B0FF43267E138E00BF4CD5 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +146,7 @@
 				B53182B4267E1DF100E7C22E /* Animations */,
 				B5FB27EC267E28BA00952600 /* Models */,
 				B5FB2813267E2DEA00952600 /* Network Service */,
+				B5A89967267E4B2000DBC663 /* Extensions */,
 				B56560CA267E1FF60042AA48 /* Supporting Files */,
 				B5B0FF58267E139200BF4CD5 /* Assets.xcassets */,
 			);
@@ -296,6 +307,7 @@
 				B5FB280B267E2AEA00952600 /* NetworkService.swift in Sources */,
 				B5B0FF50267E138E00BF4CD5 /* AppDelegate.swift in Sources */,
 				B5FB27E4267E249100952600 /* TrendingListVC.swift in Sources */,
+				B5A89965267E4A8A00DBC663 /* Extensions.swift in Sources */,
 				B59629BD267E40A3006ACFAA /* TrendingListTVC.swift in Sources */,
 				B5FB280E267E2C0C00952600 /* URLConstants.swift in Sources */,
 				B5FB27EE267E28D100952600 /* RepositoryModel.swift in Sources */,
