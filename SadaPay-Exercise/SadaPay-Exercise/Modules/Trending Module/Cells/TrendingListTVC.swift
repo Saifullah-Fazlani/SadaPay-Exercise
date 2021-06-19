@@ -7,6 +7,7 @@
 
 import UIKit
 import SDWebImage
+import SkeletonView
 
 class TrendingListTVC: UITableViewCell {
 
@@ -21,9 +22,13 @@ class TrendingListTVC: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        initViews()
+    }
+    
+    func initViews() {
         avatarImageView.makeRounded()
-        avatarImageView.setBorders(width: 1.0, color: .systemGreen)
         blueDot.makeRounded()
+        contentView.showAnimatedSkeleton()
     }
     
     func setData(object: Item?) {
@@ -34,5 +39,10 @@ class TrendingListTVC: UITableViewCell {
         lblDescription.text = repoItem.itemDescription
         lblLanguage.text = repoItem.language
         lblRating.text = repoItem.stargazersCount?.description
+    }
+    
+    func hideSkeleton() {
+        contentView.stopSkeletonAnimation()
+        contentView.hideSkeleton()
     }
 }
