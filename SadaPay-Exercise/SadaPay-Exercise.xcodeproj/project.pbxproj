@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		367DDABB9054A76EEA2C7743 /* libPods-SadaPay-Exercise.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D168F7CB7E8FA7B762F091AA /* libPods-SadaPay-Exercise.a */; };
+		B59629BD267E40A3006ACFAA /* TrendingListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59629BB267E40A3006ACFAA /* TrendingListTVC.swift */; };
+		B59629BE267E40A3006ACFAA /* TrendingListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B59629BC267E40A3006ACFAA /* TrendingListTVC.xib */; };
 		B5B0FF50267E138E00BF4CD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B0FF4F267E138E00BF4CD5 /* AppDelegate.swift */; };
 		B5B0FF52267E138E00BF4CD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B0FF51267E138E00BF4CD5 /* SceneDelegate.swift */; };
 		B5B0FF57267E138E00BF4CD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5B0FF55267E138E00BF4CD5 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B59629BB267E40A3006ACFAA /* TrendingListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingListTVC.swift; sourceTree = "<group>"; };
+		B59629BC267E40A3006ACFAA /* TrendingListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingListTVC.xib; sourceTree = "<group>"; };
 		B5B0FF4C267E138E00BF4CD5 /* SadaPay-Exercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SadaPay-Exercise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B0FF4F267E138E00BF4CD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5B0FF51267E138E00BF4CD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,15 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		B59629BA267E4093006ACFAA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B59629BB267E40A3006ACFAA /* TrendingListTVC.swift */,
+				B59629BC267E40A3006ACFAA /* TrendingListTVC.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		B5B0FF43267E138E00BF4CD5 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				B5FB27E3267E249100952600 /* TrendingListVC.swift */,
+				B59629BA267E4093006ACFAA /* Cells */,
 			);
 			path = "Trending Module";
 			sourceTree = "<group>";
@@ -224,6 +238,7 @@
 				B5B0FF59267E139200BF4CD5 /* Assets.xcassets in Resources */,
 				B5FB27DF267E246F00952600 /* Retry-Animation-Black.json in Resources */,
 				B5B0FF57267E138E00BF4CD5 /* Main.storyboard in Resources */,
+				B59629BE267E40A3006ACFAA /* TrendingListTVC.xib in Resources */,
 				B5FB27DE267E246F00952600 /* Retry-Animation-White.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +278,7 @@
 				B5FB280B267E2AEA00952600 /* NetworkService.swift in Sources */,
 				B5B0FF50267E138E00BF4CD5 /* AppDelegate.swift in Sources */,
 				B5FB27E4267E249100952600 /* TrendingListVC.swift in Sources */,
+				B59629BD267E40A3006ACFAA /* TrendingListTVC.swift in Sources */,
 				B5FB280E267E2C0C00952600 /* URLConstants.swift in Sources */,
 				B5FB27EE267E28D100952600 /* RepositoryModel.swift in Sources */,
 				B5B0FF52267E138E00BF4CD5 /* SceneDelegate.swift in Sources */,

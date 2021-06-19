@@ -19,6 +19,7 @@ struct Repository: Codable {
 // MARK: - Item
 struct Item: Codable {
     let name: String?
+    let fullName: String?
     let owner: Owner?
     let itemDescription: String?
     let stargazersCount: Int?
@@ -26,6 +27,7 @@ struct Item: Codable {
 
     enum CodingKeys: String, CodingKey {
         case name = "name"
+        case fullName = "full_name"
         case owner = "owner"
         case itemDescription = "description"
         case stargazersCount = "stargazers_count"
