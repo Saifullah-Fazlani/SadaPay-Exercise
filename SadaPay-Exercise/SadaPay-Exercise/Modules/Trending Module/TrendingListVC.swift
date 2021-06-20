@@ -41,7 +41,11 @@ class TrendingListVC: UIViewController {
     }
     
     func showRetryView(message: String) {
-        containerView.isHidden = false
+       
+        // Add fade transition while showing RetryAnimation View
+        UIView.transition(with: self.view, duration: 0.75, options: [.transitionCrossDissolve], animations: {
+            self.containerView.isHidden = false
+        }, completion: nil)
         
         // Check either controller is already initialized
         if self.controller == nil {
@@ -49,11 +53,7 @@ class TrendingListVC: UIViewController {
             controller.delegate = self
             controller.errorMessage = message
             controller.view.frame = containerView.bounds
-            
-            // Add fade transition while showing RetryAnimation View
-            UIView.transition(with: self.view, duration: 0.75, options: [.transitionCrossDissolve], animations: {
-                self.containerView.addSubview(controller.view)
-            }, completion: nil)
+            self.containerView.addSubview(controller.view)
             self.addChild(controller)
             controller.didMove(toParent: self)
             
