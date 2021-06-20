@@ -18,17 +18,30 @@ class TrendingListTVC: UITableViewCell {
     @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var blueDot: UIView!
     @IBOutlet weak var lblLanguage: UILabel!
+    @IBOutlet weak var starImageView: UIImageView!
     @IBOutlet weak var lblRating: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        initViews()
+        prepareViews()
+        self.setupNotification()
     }
     
-    func initViews() {
+    func prepareViews() {
         avatarImageView.makeRounded()
         blueDot.makeRounded()
-        contentView.showAnimatedSkeleton()
+        starImageView.makeRounded()
+        self.setSkeleton()
+        self.showSkeleton()
+    }
+    
+    func setupNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleNotification), name: .didShowSkeletons, object: nil)
+    }
+    
+    func setSkeleton() {
+        SkeletonAppearance.default.multilineLastLineFillPercent = Int.random(in: 20...70)
+        SkeletonAppearance.default.multilineCornerRadius = 8
     }
     
     func setData(object: Item?) {
@@ -41,8 +54,17 @@ class TrendingListTVC: UITableViewCell {
         lblRating.text = repoItem.stargazersCount?.description
     }
     
+    func showSkeleton() {
+        contentView.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .systemGray5), animation: nil, transition: .crossDissolve(0.25))
+    }
+    
     func hideSkeleton() {
         contentView.stopSkeletonAnimation()
         contentView.hideSkeleton()
     }
+    
+    @objc func handleNotification() {
+        showSkeleton()
+    }
+
 }

@@ -23,13 +23,20 @@ class RetryAnimationVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAnimation()
-        initViews()
+        prepareViews()
     }
     
+    // Call delegate method on TrendingList View
     @IBAction func onBtnRetry(_ sender: Any) {
         delegate?.didTappedRetry()
     }
     
+    func prepareViews() {
+        btnRetry.setBorders(width: 1.0, color: UIColor(named: "App-Green")!, cornerRadius: 4.0)
+        lblSecond.text = errorMessage!
+    }
+    
+    // Setting up animationView to display retry animation
     func setupAnimation() {
         animationView = .init(name: "Retry-Animation")
         animationView?.frame = containerView.bounds
@@ -39,8 +46,4 @@ class RetryAnimationVC: UIViewController {
         animationView?.play()
     }
     
-    func initViews() {
-        btnRetry.setBorders(width: 1.0, color: UIColor(named: "App-Green")!, cornerRadius: 4.0)
-        lblSecond.text = errorMessage!
-    }
 }
