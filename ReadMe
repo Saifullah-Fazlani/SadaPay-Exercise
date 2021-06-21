@@ -1,0 +1,11 @@
+Following assumptions have been made while development of this project.
+
+1. Minimum iOS support is set to 13.0
+2. In order to see current data, user would need to use "Pull to refresh" functionality.
+3. Retry animation would be displayed when:
+	i. API is unreachable
+	ii. API returns erroneous data
+	iii. Network is unreachable
+4. Dark mode functionality follows system settings for user interface.
+
+Also, Git history has been attached.
