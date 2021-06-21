@@ -12,15 +12,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrendingListTVC" rowHeight="143" id="KGk-i7-Jjw" customClass="TrendingListTVC" customModule="SadaPay_Exercise" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="446" height="137"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrendingListTVC" rowHeight="149" id="KGk-i7-Jjw" customClass="TrendingListTVC" customModule="SadaPay_Exercise" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="379" height="143"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="446" height="137"/>
+                <rect key="frame" x="0.0" y="0.0" width="379" height="143"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hej-kE-b9I" userLabel="Parent View">
-                        <rect key="frame" x="0.0" y="0.0" width="446" height="137"/>
+                        <rect key="frame" x="0.0" y="0.0" width="379" height="143"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y7T-91-qok">
                                 <rect key="frame" x="20" y="20" width="40" height="40"/>
@@ -32,95 +32,120 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ternaus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wd-fL-G97">
-                                <rect key="frame" x="80" y="16" width="40.5" height="15"/>
-                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="12"/>
-                                <nil key="highlightedColor"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7Pl-iR-uXR" userLabel="Main Stack View">
+                                <rect key="frame" x="80" y="20" width="279" height="103"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ternaus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wd-fL-G97">
+                                        <rect key="frame" x="0.0" y="0.0" width="279" height="15"/>
+                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="12"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="retinaface" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exc-CD-l1b">
+                                        <rect key="frame" x="0.0" y="23" width="279" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="14"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="The original model of retina face and ternaus" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCa-m1-0ha">
+                                        <rect key="frame" x="0.0" y="48.5" width="279" height="15"/>
+                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="12"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6nQ-XI-oNQ" userLabel="Bottom Stack View">
+                                        <rect key="frame" x="0.0" y="71.5" width="279" height="31.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nxi-xZ-7gG" userLabel="Language Stack View">
+                                                <rect key="frame" x="0.0" y="10" width="135.5" height="12"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="puZ-a9-1BX" userLabel="Blue Dot">
+                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="12"/>
+                                                        <color key="backgroundColor" name="App-Blue"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="12" id="aVN-0Y-K6Y"/>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="12" id="tll-VB-xWD"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Python" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPM-cX-f1T">
+                                                        <rect key="frame" x="20" y="0.0" width="115.5" height="12"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="fXo-jH-Llk"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="12"/>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WYx-aa-B07" userLabel="Rating Stack View">
+                                                <rect key="frame" x="143.5" y="8.5" width="135.5" height="15"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starIcon" translatesAutoresizingMaskIntoConstraints="NO" id="6zV-EA-eXV" userLabel="Star Image View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                        <color key="tintColor" name="App-Yellow"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="15" id="5u8-11-Acp"/>
+                                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="15" id="X1I-VS-dmH"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="115" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tge-7r-d9a">
+                                                        <rect key="frame" x="23" y="0.0" width="112.5" height="15"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="L0g-mO-bwR"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="12"/>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </stackView>
+                                        </subviews>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="retinaface" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exc-CD-l1b">
-                                <rect key="frame" x="80" y="39" width="61.5" height="17.5"/>
-                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="14"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="The original model of retina face and ternaus" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCa-m1-0ha">
-                                <rect key="frame" x="80" y="68.5" width="241.5" height="25.5"/>
-                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="12"/>
-                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Python" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPM-cX-f1T">
-                                <rect key="frame" x="103" y="106" width="37.5" height="15"/>
-                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="12"/>
-                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="115" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tge-7r-d9a">
-                                <rect key="frame" x="188.5" y="106" width="19.5" height="15"/>
-                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="12"/>
-                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="puZ-a9-1BX" userLabel="Blue Dot">
-                                <rect key="frame" x="80" y="106" width="15" height="15"/>
-                                <color key="backgroundColor" name="App-Blue"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="15" id="JRA-rq-kPl"/>
-                                    <constraint firstAttribute="height" constant="15" id="oMd-me-g3l"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starIcon" translatesAutoresizingMaskIntoConstraints="NO" id="6zV-EA-eXV" userLabel="Star Image View">
-                                <rect key="frame" x="160.5" y="103.5" width="20" height="20"/>
-                                <color key="tintColor" name="App-Yellow"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="TNp-lg-Stv"/>
-                                    <constraint firstAttribute="width" constant="20" id="mdH-z0-hQk"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="TCa-m1-0ha" firstAttribute="top" secondItem="exc-CD-l1b" secondAttribute="bottom" constant="12" id="0Or-Kq-tlf"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8Wd-fL-G97" secondAttribute="trailing" constant="20" id="1Pm-0L-rpE"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TCa-m1-0ha" secondAttribute="trailing" constant="20" id="1gm-Do-Nu2"/>
-                            <constraint firstAttribute="bottom" secondItem="gPM-cX-f1T" secondAttribute="bottom" constant="16" id="2fK-gM-OE7"/>
-                            <constraint firstItem="puZ-a9-1BX" firstAttribute="leading" secondItem="TCa-m1-0ha" secondAttribute="leading" id="2k9-Tv-y9o"/>
+                            <constraint firstAttribute="bottom" secondItem="7Pl-iR-uXR" secondAttribute="bottom" constant="20" id="10j-Tj-Z6I"/>
                             <constraint firstItem="y7T-91-qok" firstAttribute="leading" secondItem="hej-kE-b9I" secondAttribute="leading" constant="20" id="69G-Xj-PIR"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Tge-7r-d9a" secondAttribute="trailing" constant="20" id="8wB-yj-7Vw"/>
-                            <constraint firstItem="6zV-EA-eXV" firstAttribute="centerY" secondItem="gPM-cX-f1T" secondAttribute="centerY" id="Hcf-aS-lez"/>
-                            <constraint firstItem="exc-CD-l1b" firstAttribute="top" secondItem="8Wd-fL-G97" secondAttribute="bottom" constant="8" id="J1X-OT-Qb9"/>
-                            <constraint firstItem="8Wd-fL-G97" firstAttribute="leading" secondItem="y7T-91-qok" secondAttribute="trailing" constant="20" id="MDz-CC-0VE"/>
-                            <constraint firstItem="Tge-7r-d9a" firstAttribute="leading" secondItem="6zV-EA-eXV" secondAttribute="trailing" constant="8" id="O9J-1O-9TB"/>
-                            <constraint firstItem="6zV-EA-eXV" firstAttribute="leading" secondItem="gPM-cX-f1T" secondAttribute="trailing" constant="20" id="Okz-DS-gxR"/>
-                            <constraint firstItem="exc-CD-l1b" firstAttribute="leading" secondItem="8Wd-fL-G97" secondAttribute="leading" id="VJL-gz-l9B"/>
-                            <constraint firstItem="gPM-cX-f1T" firstAttribute="centerY" secondItem="puZ-a9-1BX" secondAttribute="centerY" id="bDk-o1-pwn"/>
-                            <constraint firstItem="8Wd-fL-G97" firstAttribute="top" secondItem="hej-kE-b9I" secondAttribute="top" constant="16" id="f7e-gl-0lW"/>
-                            <constraint firstItem="gPM-cX-f1T" firstAttribute="top" secondItem="TCa-m1-0ha" secondAttribute="bottom" constant="12" id="ftf-us-bG0"/>
+                            <constraint firstAttribute="trailing" secondItem="7Pl-iR-uXR" secondAttribute="trailing" constant="20" id="Grt-gT-cXp"/>
+                            <constraint firstItem="7Pl-iR-uXR" firstAttribute="leading" secondItem="y7T-91-qok" secondAttribute="trailing" constant="20" id="cP8-rk-bV4"/>
                             <constraint firstItem="y7T-91-qok" firstAttribute="top" secondItem="hej-kE-b9I" secondAttribute="top" constant="20" id="hya-8N-h2R"/>
-                            <constraint firstItem="TCa-m1-0ha" firstAttribute="leading" secondItem="exc-CD-l1b" secondAttribute="leading" id="sZ7-OY-gW2"/>
-                            <constraint firstItem="Tge-7r-d9a" firstAttribute="centerY" secondItem="6zV-EA-eXV" secondAttribute="centerY" id="skb-7X-w5z"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="exc-CD-l1b" secondAttribute="trailing" constant="20" id="tD4-9t-IbA"/>
-                            <constraint firstItem="gPM-cX-f1T" firstAttribute="leading" secondItem="puZ-a9-1BX" secondAttribute="trailing" constant="8" id="wFg-p0-QrJ"/>
+                            <constraint firstItem="7Pl-iR-uXR" firstAttribute="top" secondItem="hej-kE-b9I" secondAttribute="top" constant="20" id="qin-rz-B0c"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
@@ -146,15 +171,17 @@
             <connections>
                 <outlet property="avatarImageView" destination="y7T-91-qok" id="e5X-aK-edT"/>
                 <outlet property="blueDot" destination="puZ-a9-1BX" id="77T-4E-3Ai"/>
+                <outlet property="bottomStackView" destination="6nQ-XI-oNQ" id="DIw-hX-l9F"/>
                 <outlet property="lblDescription" destination="TCa-m1-0ha" id="FoW-Hl-mMZ"/>
                 <outlet property="lblFullName" destination="exc-CD-l1b" id="Zcr-r3-Q0u"/>
                 <outlet property="lblLanguage" destination="gPM-cX-f1T" id="DFj-gy-dvA"/>
                 <outlet property="lblName" destination="8Wd-fL-G97" id="udt-JM-P5j"/>
                 <outlet property="lblRating" destination="Tge-7r-d9a" id="iI6-qk-Ihk"/>
+                <outlet property="mainStackView" destination="7Pl-iR-uXR" id="Ief-aV-ba6"/>
                 <outlet property="parentView" destination="hej-kE-b9I" id="Wla-dm-ASD"/>
                 <outlet property="starImageView" destination="6zV-EA-eXV" id="cwP-JU-cdG"/>
             </connections>
-            <point key="canvasLocation" x="-298.55072463768118" y="136.94196428571428"/>
+            <point key="canvasLocation" x="-258.69565217391306" y="9.7098214285714288"/>
         </tableViewCell>
     </objects>
     <resources>

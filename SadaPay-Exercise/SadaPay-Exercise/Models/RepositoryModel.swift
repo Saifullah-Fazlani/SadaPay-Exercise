@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Repository
 struct Repository: Codable {
-    let items: [Item]?
+    var items: [Item]?
 
     enum CodingKeys: String, CodingKey {
         case items = "items"
@@ -24,6 +24,8 @@ struct Item: Codable {
     let itemDescription: String?
     let stargazersCount: Int?
     let language: String?
+    
+    var isExpandable = false
 
     enum CodingKeys: String, CodingKey {
         case name = "name"

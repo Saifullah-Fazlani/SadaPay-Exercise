@@ -40,12 +40,18 @@ class TrendingListVC: UIViewController {
         refreshControl.addTarget(self, action: #selector(fetchData), for: .valueChanged)
     }
     
-    func showRetryView(message: String) {
-       
-        // Add fade transition while showing RetryAnimation View
+    func addTransition(callback: @escaping () -> Void) {
         UIView.transition(with: self.view, duration: 0.75, options: [.transitionCrossDissolve], animations: {
-            self.containerView.isHidden = false
+           callback()
         }, completion: nil)
+    }
+    
+    func showRetryView(message: String) {
+        
+        // Add fade transition while showing RetryAnimation View
+        self.addTransition {
+            self.containerView.isHidden = false
+        }
         
         // Check either controller is already initialized
         if self.controller == nil {
@@ -56,7 +62,6 @@ class TrendingListVC: UIViewController {
             self.containerView.addSubview(controller.view)
             self.addChild(controller)
             controller.didMove(toParent: self)
-            
             // Save controller reference for checking next time this function is called.
             self.controller = controller
         }
@@ -64,9 +69,10 @@ class TrendingListVC: UIViewController {
     
     func hideRetryView() {
         if !containerView.isHidden {
-            UIView.transition(with: self.view, duration: 0.75, options: [.transitionCrossDissolve], animations: {
+            // Add fade transition while hiding RetryAnimation View
+            self.addTransition {
                 self.containerView.isHidden = true
-            }, completion: nil)
+            }
         }
     }
     
@@ -83,25 +89,37 @@ extension TrendingListVC: SkeletonTableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Check either repository data is not null
         guard let repositoryItems = self.repositoryData?.items else {
-            // Display 5 skeleton cells if data is null
-            return 5
+            // Display 10 skeleton cells if data is null
+            return 10
         }
         return repositoryItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TrendingListTVC", for: indexPath) as! TrendingListTVC
+        
+        // Check either items array is not null
         guard let repositoryItems = repositoryData?.items else {
             return cell
         }
         cell.setData(object: repositoryItems[indexPath.row])
-        // Hide skeleton when data is populated in cell
-        cell.hideSkeleton()
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // Deselect row after row has been selected
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        // Toggle the expandable flag for that item
+        repositoryData?.items?[indexPath.row].isExpandable.toggle()
+        
+        // Reload the row to toggle visibility for bottom views
+        tableView.reloadRows(at: [IndexPath(row: indexPath.row, section: indexPath.section)], with: .automatic)
     }
     
 }
