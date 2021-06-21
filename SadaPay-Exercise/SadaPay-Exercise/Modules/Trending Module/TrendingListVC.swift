@@ -100,6 +100,7 @@ extension TrendingListVC: SkeletonTableViewDataSource, UITableViewDelegate {
         
         // Check either items array is not null
         guard let repositoryItems = repositoryData?.items else {
+            cell.showSkeleton(object: nil)
             return cell
         }
         cell.setData(object: repositoryItems[indexPath.row])

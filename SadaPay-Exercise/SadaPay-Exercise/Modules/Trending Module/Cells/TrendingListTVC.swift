@@ -34,11 +34,10 @@ class TrendingListTVC: UITableViewCell {
         blueDot.makeRounded()
         starImageView.makeRounded()
         setSkeleton()
-        showSkeleton()
     }
     
     func setupNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(showSkeleton), name: .didShowSkeletons, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleNotification), name: .didShowSkeletons, object: nil)
     }
     
     func setSkeleton() {
@@ -46,8 +45,15 @@ class TrendingListTVC: UITableViewCell {
         SkeletonAppearance.default.multilineCornerRadius = 8
     }
     
-    @objc func showSkeleton() {
-        contentView.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .systemGray5), animation: nil, transition: .crossDissolve(0.25))
+    func showSkeleton(object: Item?) {
+        // Show skeleton view only when data is null
+        if object == nil {
+            contentView.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .systemGray5), animation: nil, transition: .crossDissolve(0.25))
+        }
+    }
+    
+    @objc func handleNotification() {
+        self.showSkeleton(object: nil)
     }
     
     func hideSkeleton() {
@@ -56,6 +62,10 @@ class TrendingListTVC: UITableViewCell {
     }
     
     func setData(object: Item?) {
+        
+        // Show skeleton view
+        self.showSkeleton(object: object)
+        
         // Safely unwrap the object and avatarUrl
         guard let repoItem = object, let avatarUrl = repoItem.owner?.avatarUrl else {return}
         
