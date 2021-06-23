@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B51A1E6B268345D000BBBD62 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51A1E6A268345D000BBBD62 /* TestVC.swift */; };
 		B59629BD267E40A3006ACFAA /* TrendingListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59629BB267E40A3006ACFAA /* TrendingListTVC.swift */; };
 		B59629BE267E40A3006ACFAA /* TrendingListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B59629BC267E40A3006ACFAA /* TrendingListTVC.xib */; };
 		B5A8426B267E7A78001759A0 /* RetryAnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A8426A267E7A78001759A0 /* RetryAnimationVC.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		2643635DDDF1A769570EF00B /* Pods_SadaPay_Exercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SadaPay_Exercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B51A1E6A268345D000BBBD62 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		B59629BB267E40A3006ACFAA /* TrendingListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingListTVC.swift; sourceTree = "<group>"; };
 		B59629BC267E40A3006ACFAA /* TrendingListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingListTVC.xib; sourceTree = "<group>"; };
 		B5A8426A267E7A78001759A0 /* RetryAnimationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetryAnimationVC.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			children = (
 				B5A84269267E7A78001759A0 /* Retry Animations Module */,
 				B5FB27E2267E249100952600 /* Trending Module */,
+				B51A1E6A268345D000BBBD62 /* TestVC.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				B5A89965267E4A8A00DBC663 /* Constants-Extensions.swift in Sources */,
 				B59629BD267E40A3006ACFAA /* TrendingListTVC.swift in Sources */,
 				B5FB27EE267E28D100952600 /* RepositoryModel.swift in Sources */,
+				B51A1E6B268345D000BBBD62 /* TestVC.swift in Sources */,
 				B5B0FF52267E138E00BF4CD5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

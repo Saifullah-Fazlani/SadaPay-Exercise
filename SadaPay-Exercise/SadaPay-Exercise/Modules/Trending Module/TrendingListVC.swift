@@ -8,7 +8,7 @@
 import UIKit
 import SkeletonView
 
-protocol RetryDelegate {
+protocol RetryDelegate: class {
     func didTappedRetry()
 }
 
@@ -76,6 +76,12 @@ class TrendingListVC: UIViewController {
         }
     }
     
+    func showController(object: Item?) {
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "TestVC") as! TestVC
+        controller.authorName = object?.fullName
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
 }
 
 // MARK: - tableView Datasource and Delegate
@@ -90,7 +96,7 @@ extension TrendingListVC: SkeletonTableViewDataSource, UITableViewDelegate {
         // Check either repository data is not null
         guard let repositoryItems = self.repositoryData?.items else {
             // Display 10 skeleton cells if data is null
-            return 10
+            return 5
         }
         return repositoryItems.count
     }
@@ -100,7 +106,7 @@ extension TrendingListVC: SkeletonTableViewDataSource, UITableViewDelegate {
         
         // Check either items array is not null
         guard let repositoryItems = repositoryData?.items else {
-            cell.showSkeleton(object: nil)
+            cell.showSkeleton()
             return cell
         }
         cell.setData(object: repositoryItems[indexPath.row])
@@ -131,9 +137,12 @@ extension TrendingListVC {
         
         //Hide RetryAnimation View
         self.hideRetryView()
+
+        // Make the repository data nil
+        repositoryData?.items = nil
         
-        // Post a notification to tableview cell to show skeleton view
-        NotificationCenter.default.post(.init(name: .didShowSkeletons))
+        // Reload the table view
+        tableView.reloadData()
         
         // Make network call to fetch data from API
         NetworkService.sharedInstance.getRepositoryList { (response, errorMessage) in

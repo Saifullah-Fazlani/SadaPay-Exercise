@@ -25,7 +25,10 @@ class NetworkService {
                 // API was reachable and returned data
                 case .success:
                     print(response as Any)
-                    guard let responseData = response.data else {return}
+                    guard let responseData = response.data else {
+                        completionHandler(nil, response.error?.errorDescription, nil)
+                        return
+                    }
                     // Pass response data and status code for success
                     completionHandler(responseData, nil, response.response?.statusCode)
                     

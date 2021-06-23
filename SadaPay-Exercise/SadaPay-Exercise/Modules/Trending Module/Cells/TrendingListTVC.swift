@@ -10,7 +10,7 @@ import SDWebImage
 import SkeletonView
 
 class TrendingListTVC: UITableViewCell {
-
+    
     @IBOutlet weak var parentView: UIView!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var mainStackView: UIStackView!
@@ -22,11 +22,10 @@ class TrendingListTVC: UITableViewCell {
     @IBOutlet weak var lblLanguage: UILabel!
     @IBOutlet weak var starImageView: UIImageView!
     @IBOutlet weak var lblRating: UILabel!
-        
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         prepareViews()
-        setupNotification()
     }
     
     func prepareViews() {
@@ -36,24 +35,13 @@ class TrendingListTVC: UITableViewCell {
         setSkeleton()
     }
     
-    func setupNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(handleNotification), name: .didShowSkeletons, object: nil)
-    }
-    
     func setSkeleton() {
         SkeletonAppearance.default.multilineLastLineFillPercent = Int.random(in: 20...70)
         SkeletonAppearance.default.multilineCornerRadius = 8
     }
     
-    func showSkeleton(object: Item?) {
-        // Show skeleton view only when data is null
-        if object == nil {
-            contentView.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .systemGray5), animation: nil, transition: .crossDissolve(0.25))
-        }
-    }
-    
-    @objc func handleNotification() {
-        self.showSkeleton(object: nil)
+    func showSkeleton() {
+        contentView.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .systemGray5), animation: nil, transition: .crossDissolve(0.25))
     }
     
     func hideSkeleton() {
@@ -62,9 +50,6 @@ class TrendingListTVC: UITableViewCell {
     }
     
     func setData(object: Item?) {
-        
-        // Show skeleton view
-        self.showSkeleton(object: object)
         
         // Safely unwrap the object and avatarUrl
         guard let repoItem = object, let avatarUrl = repoItem.owner?.avatarUrl else {return}
@@ -88,5 +73,5 @@ class TrendingListTVC: UITableViewCell {
         lblDescription.isHidden = !value
         bottomStackView.isHidden = !value
     }
-
+    
 }
